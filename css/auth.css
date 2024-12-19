@@ -14,25 +14,21 @@
 .content__auth {
   background-color: rgba(24, 26, 28, 0.84);
   width: 529px;
-  height: 663px;
+  height: auto;
   padding: 40px;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
+  justify-content: center;
   align-items: center;
 }
 
-.content__auth__logo {
-  /* margin-bottom: 37px; */
-}
-
-.content__auth__header {
+.content__auth__header h3 {
   text-align: center;
-  margin-bottom: 37px;
+  margin-bottom: 0;
 }
 
 .form__group {
-  margin-bottom: 37px;
+  margin-top: 37px;
   display: flex;
   flex-direction: column;
   width: 449px;
