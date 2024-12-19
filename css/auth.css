@@ -5,21 +5,37 @@
   align-items: center;
   height: 100vh;
   width: 100%;
-  background-image: url(/images/bg-login.png);
   background-size: cover;
   background-position: 50%;
+}
+
+.login__bg {
+  background-image: url(/images/bg-login.png);
+}
+
+.register__bg {
+  background-image: url(/images/bg-login.png);
 }
 
 /* content */
 .content__auth {
   background-color: rgba(24, 26, 28, 0.84);
-  width: 529px;
-  height: auto;
+  border-radius: 16px;
   padding: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.login__page {
+  width: 529px;
+  height: 663px;
+}
+
+.register__page {
+  width: 529px;
+  height: 778px;
 }
 
 .content__auth__header h3 {
@@ -40,6 +56,7 @@
 
 .form__group input {
   background-color: transparent;
+  font-family: "Lato", sans-serif;
   font-size: 1rem;
   color: var(--text-light-secondary);
   height: 50px;
