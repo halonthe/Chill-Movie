@@ -1,0 +1,55 @@
+@media (max-width: 550px) {
+  /* mobile screen for auth page */
+  .login__page {
+    width: 306px;
+    height: 384px;
+  }
+
+  .content__auth__logo img {
+    width: 94px;
+    height: 24px;
+  }
+
+  .content__auth__header h3 {
+    font-size: 1.125rem;
+  }
+
+  .content__auth__header span {
+    font-size: 0.625rem;
+  }
+
+  .form__group {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 260px;
+  }
+
+  .form__group label {
+    font-size: 0.625rem;
+  }
+
+  .form__group input {
+    font-size: 0.578rem;
+    height: 28px;
+    padding: 14px 20px;
+    margin-top: 4px;
+  }
+
+  .form__link {
+    font-size: 0.625rem;
+  }
+
+  .form__submit button {
+    font-size: 0.625rem;
+    height: 30px;
+  }
+  .form__submit span {
+    font-size: 0.625rem;
+  }
+
+  .register__page {
+    width: 306px;
+    height: 452px;
+  }
+}

@@ -6,7 +6,9 @@
   height: 100vh;
   width: 100%;
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: 50%;
+  overflow: hidden;
 }
 
 .login__bg {
@@ -14,7 +16,7 @@
 }
 
 .register__bg {
-  background-image: url(/images/bg-login.png);
+  background-image: url(/images/bg-signup.png);
 }
 
 /* content */
