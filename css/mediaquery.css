@@ -1,5 +1,9 @@
+/* dashboard mobile */
+/* @media (max-width: 750px) {
+} */
+
+/* auth mobile */
 @media (max-width: 550px) {
-  /* mobile screen for auth page */
   .login__page {
     width: 306px;
     height: 384px;
