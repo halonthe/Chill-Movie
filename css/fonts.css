@@ -25,3 +25,8 @@
     url(/fonts/Lato-SemiBold.woff) format("woff"),
     url(/fonts/Lato-SemiBold.ttf) format("truetype");
 }
+
+@font-face {
+  font-family: "Londrina-Solid";
+  src: url(/fonts/LondrinaSolid-Regular.otf) format("opentype");
+}

@@ -1,5 +1,5 @@
 /* lato fonts */
-@import url(/css/latofonts.css);
+@import url(/css/fonts.css);
 
 :root {
   /* main colors */
@@ -69,6 +69,7 @@ body {
 
 a {
   text-decoration: none;
+  color: var(--text-light-primary);
 }
 
 h1 {

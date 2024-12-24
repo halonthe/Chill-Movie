@@ -4,21 +4,23 @@
 
 /* main */
 main {
+  max-width: 1440px;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  position: absolute;
-  top: 94px;
+  margin: 0 auto;
 }
 
 /* header */
 .header {
   background-color: var(--c-page-header-bg);
+  color: var(--text-light-secondary);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 25px 80px;
+  max-width: 1440px;
   width: 100%;
   height: 94px;
   font-family: "Lato-Medium", sans-serif;
@@ -27,32 +29,70 @@ main {
   z-index: 100;
 }
 
-.nav ul {
+/* Navbar */
+.nav {
   display: flex;
-  justify-content: flex-start;
+  flex: auto;
+  max-width: 522px;
+  height: 44px;
+  width: 100%;
   align-items: center;
-  gap: 80px;
-  padding: 0;
+  gap: 15.5%;
 }
 
-.nav ul li a {
+.nav a {
   color: var(--text-light-secondary);
 }
 
-.nav ul li a:hover {
+.nav a:hover {
   color: var(--c-main-primary);
 }
 
-.nav ul li img {
-  scale: 0.75;
+.nav .logo {
+  max-width: 103.55px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav .logo a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav .logo a:hover {
+  color: var(--text-light-primary-primary);
+}
+
+.logo__text {
+  font-family: "Londrina-Solid", sans-serif;
+  font-size: 2rem;
+  color: var(--text-light-primary);
+}
+
+.logo__text::after {
+  content: " CHILL";
+}
+
+/* profile */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
 }
 
 .profile a {
+  width: 28px;
+  height: 28px;
   cursor: pointer;
 }
 
 /* hero */
 .hero {
+  max-width: 1440px;
   width: 100%;
   height: 587px;
   background-image: url(/images/hero.png);
@@ -60,9 +100,10 @@ main {
   background-repeat: no-repeat;
   background-position: center;
   padding: 274px 80px 80px 80px;
+  margin-top: 94px;
 }
 
-.hero__content {
+.hero__container {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -70,21 +111,17 @@ main {
   font-size: 1.125rem;
 }
 
-.hero__description {
-  width: 668px;
-  height: 148px;
+.hero__text {
+  max-width: 668px;
+  max-height: 148px;
   margin-bottom: 40px;
 }
 
-.hero__description h1 {
+.hero__text h1 {
   margin-bottom: 20px;
 }
-.hero__description p {
-  display: flex;
-  flex-wrap: wrap;
-}
 
-.hero__trailer {
+.hero__button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -94,7 +131,7 @@ main {
   margin-top: 40px;
 }
 
-.hero__action {
+.hero__info {
   display: flex;
   align-items: center;
   width: 100%;
@@ -102,7 +139,7 @@ main {
   gap: 10px;
 }
 
-.hero__action .watch {
+.hero__info .watch {
   background-color: var(--c-main-300);
   width: 93px;
   height: 100%;
@@ -113,7 +150,7 @@ main {
   font-size: 1rem;
 }
 
-.hero__action .info {
+.hero__info .info {
   background-color: var(--c-paper-bg);
   border: none;
   border-radius: 48px;
@@ -128,7 +165,7 @@ main {
   gap: 8px;
 }
 
-.hero__action .age__ratings {
+.hero__info .age__ratings {
   width: 52px;
   height: 100%;
   color: var(--text-light-secondary);
@@ -139,7 +176,7 @@ main {
   cursor: pointer;
 }
 
-.hero__control {
+.hero__volume {
   display: flex;
   justify-content: center;
   width: 44px;
@@ -164,24 +201,56 @@ main {
 }
 
 .movie__list {
+  max-width: 1440px;
   width: 100%;
   display: flex;
   justify-content: space-between;
+  position: relative;
   align-items: center;
+}
+
+.slider {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  flex: none;
   gap: 24px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.slider::-webkit-scrollbar {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  display: none;
 }
 
 .movie {
   width: 234px;
   height: 365px;
+  border-radius: 8px;
   position: relative;
   cursor: pointer;
   overflow: hidden;
 }
 
-.landscape {
-  width: 302px;
-  height: 162px;
+.movie img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.movie img:hover {
+  border-radius: 8px;
+  transform: scale(1.1);
+}
+
+.recent {
+  width: 302px !important;
+  height: 162px !important;
+  border-radius: 8px;
 }
 
 .new__episode {
@@ -199,6 +268,23 @@ main {
   border-radius: 24px;
   font-family: "Lato-Bold", sans-serif;
   background-color: var(--c-main-300);
+}
+
+.top_10 {
+  width: 31px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 4px;
+  margin: 0 10px;
+  border-radius: 0 5px;
+  text-align: center;
+  background-color: var(--c-error-pressed);
+  font-size: 0.875rem;
 }
 
 .movie__title {
@@ -221,18 +307,17 @@ main {
 
 .arrow {
   display: flex;
-
   cursor: pointer;
   position: absolute;
   z-index: 1;
 }
 
 .arrow:first-child {
-  left: 55px;
+  left: -20px;
 }
 
 .arrow:last-child {
-  right: 55px;
+  right: -20px;
 }
 
 /* Footer */
@@ -306,4 +391,8 @@ footer span {
 
 .help ul a:hover {
   color: var(--c-main-primary);
+}
+
+.chevron {
+  display: none;
 }
